@@ -232,13 +232,13 @@
             labels: ['General Manager', 'Commercial Manager', 'Process/Project Manager'],
             datasets: [{
                 label: 'Strategic Focus',
-                data: [90, 60, 40],
+                data: [70, 60, 50],
                 backgroundColor: brilliantBluesPalette.primary,
                 borderColor: brilliantBluesPalette.dark,
                 borderWidth: 1
             }, {
                 label: 'Operational Focus',
-                data: [70, 50, 95],
+                data: [30, 40, 50],
                 backgroundColor: brilliantBluesPalette.accent1,
                 borderColor: brilliantBluesPalette.dark,
                 borderWidth: 1
@@ -283,11 +283,11 @@
         options: {
             maintainAspectRatio: false,
             scales: {
-                x: { display: false },
-                y: { display: false }
+                x: { display: true },
+                y: { display: true }
             },
             plugins: {
-                legend: { display: false },
+                legend: { display: true },
                 tooltip: { 
                     callbacks: {
                         title: tooltipTitleCallback,
@@ -309,7 +309,7 @@
         data: {
             labels: ['Family', 'Intellectual Pursuits', 'Discipline (Kung Fu)', 'Recreation (Music)'],
             datasets: [{
-                data: [45, 25, 15, 15],
+                data: [43, 30, 10, 17],
                 backgroundColor: [brilliantBluesPalette.accent3, brilliantBluesPalette.primary, brilliantBluesPalette.accent1, brilliantBluesPalette.secondary],
                 hoverOffset: 4
             }]
