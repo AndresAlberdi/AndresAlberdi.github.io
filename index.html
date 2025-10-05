@@ -283,20 +283,21 @@
         options: {
             maintainAspectRatio: false,
             scales: { 
-            x: {
-                min: 0,   // 👈 Empieza en 0
-                max: 5,   // 👈 Termina en 5
-                ticks: {stepSize: 1, color: brilliantBluesPalette.dark},
-                grid: {color: 'rgba(0, 0, 0, 0.1)'},
-                title: {display: true, text: 'Importancia', color: brilliantBluesPalette.dark}
-            },
-            y: {
-                min: 0,   // 👈 Empieza en 0
-                max: 5,   // 👈 Termina en 5
-                ticks: {stepSize: 1, color: brilliantBluesPalette.dark},
-                grid: {color: 'rgba(0, 0, 0, 0.1)'},
-                title: {display: true, text: 'Experiencia', color: brilliantBluesPalette.dark}
-            },
+				x: {
+					min: 0,   // 👈 Empieza en 0
+					max: 5,   // 👈 Termina en 5
+					ticks: {stepSize: 1, color: brilliantBluesPalette.dark},
+					grid: {color: 'rgba(0, 0, 0, 0.1)'},
+					title: {display: true, text: 'Importancia', color: brilliantBluesPalette.dark}
+				},
+				y: {
+					min: 0,   // 👈 Empieza en 0
+					max: 5,   // 👈 Termina en 5
+					ticks: {stepSize: 1, color: brilliantBluesPalette.dark},
+					grid: {color: 'rgba(0, 0, 0, 0.1)'},
+					title: {display: true, text: 'Experiencia', color: brilliantBluesPalette.dark}
+				},
+			},
             plugins: {
                 legend: { display: true },
                 tooltip: { 
@@ -312,7 +313,6 @@
                     }
                 }
             }
-        }
     });
 
     new Chart(document.getElementById('lifeBalanceChart'), {
