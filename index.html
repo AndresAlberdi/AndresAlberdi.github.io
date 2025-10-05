@@ -258,7 +258,7 @@
         }
     });
     
-    const intellectualLabels = ['Algebraic Logic', 'Axiomatic Geometry', 'Physics', wrapLabel('Philosophy of Mind'), wrapLabel('Theories of Everything')];
+    const intellectualLabels = ['Algebraic Logic', 'Axiomatic Geometry', 'Physics', 'Philosophy of Mind', 'Theories of Everything'];
     new Chart(document.getElementById('intellectualInterestsChart'), {
         type: 'bubble',
         data: {
@@ -266,16 +266,16 @@
             datasets: [{
                 label: 'Primary Focus',
                 data: [
-                    { x: 1, y: 3, r: 25 }, 
-                    { x: 2, y: 2, r: 25 }  
+                    { x: 3, y: 4, r: 25 }, 
+                    { x: 5, y: 3, r: 25 }  
                 ],
                 backgroundColor: brilliantBluesPalette.primary
             }, {
                 label: 'Secondary Interest',
                 data: [
-                    { x: 3, y: 4, r: 15 },
-                    { x: 4, y: 1, r: 20 },
-                    { x: 5, y: 3, r: 18 }
+                    { x: 2, y: 2, r: 15 },
+                    { x: 3, y: 3, r: 20 },
+                    { x: 3, y: 2, r: 18 }
                 ],
                 backgroundColor: brilliantBluesPalette.accent1
             }]
@@ -283,8 +283,10 @@
         options: {
             maintainAspectRatio: false,
             scales: {
-                x: { display: true },
-                y: { display: true }
+                x: { display: true, label: "Importancia" },
+                y: { display: true, label: "Experiencia" }
+                min: 0,
+                max: 5,
             },
             plugins: {
                 legend: { display: true },
