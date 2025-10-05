@@ -229,7 +229,7 @@
     new Chart(document.getElementById('leadershipRolesChart'), {
         type: 'bar',
         data: {
-            labels: ['General Manager', 'Commercial Manager', 'Process/Project Manager'],
+            labels: ['General Manager', 'Commercial Manager', wraplabel('Process/Project Manager')],
             datasets: [{
                 label: 'Strategic Focus',
                 data: [70, 60, 50],
@@ -311,7 +311,7 @@
         data: {
             labels: ['Family', 'Intellectual Pursuits', 'Discipline (Kung Fu)', 'Recreation (Music)'],
             datasets: [{
-                data: [43, 30, 10, 17],
+                data: [43, 30, 17, 10],
                 backgroundColor: [brilliantBluesPalette.accent3, brilliantBluesPalette.primary, brilliantBluesPalette.accent1, brilliantBluesPalette.secondary],
                 hoverOffset: 4
             }]
