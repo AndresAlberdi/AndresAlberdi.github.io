@@ -282,11 +282,37 @@
         },
         options: {
             maintainAspectRatio: false,
-            scales: {
-                x: { display: true, label: "Importancia" },
-                y: { display: true, label: "Experiencia" }
-                min: 0,
-                max: 5,
+            scales: x: {
+                min: 0,   // 👈 Empieza en 0
+                max: 5,   // 👈 Termina en 5
+                ticks: {
+                    stepSize: 1,
+                    color: brilliantBluesPalette.dark
+                },
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                },
+                title: {
+                    display: true,
+                    text: 'Importancia',
+                    color: brilliantBluesPalette.dark
+                }
+            },
+            y: {
+                min: 0,   // 👈 Empieza en 0
+                max: 5,   // 👈 Termina en 5
+                ticks: {
+                    stepSize: 1,
+                    color: brilliantBluesPalette.dark
+                },
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                },
+                title: {
+                    display: true,
+                    text: 'Experiencia',
+                    color: brilliantBluesPalette.dark
+                }
             },
             plugins: {
                 legend: { display: true },
