@@ -68,7 +68,7 @@
                                 <div class="bg-[#EE9B00] text-white font-bold rounded-full h-12 w-12 flex items-center justify-center shadow-lg">2</div>
                                 <div class="ml-4 p-3 bg-gray-100 rounded-lg flex-1 shadow">
                                     <h4 class="font-bold">System Implementation</h4>
-                                    <p class="text-sm">Building and deploying core systems like ERP, CRM, and transaction engines.</p>
+                                    <p class="text-sm">Building and deploying various systems like transaction, biometric and payment engines.</p>
                                 </div>
                             </div>
                              <div class="ml-6 border-l-4 border-dashed border-[#94D2BD] h-8"></div>
@@ -115,7 +115,7 @@
                         <h3 class="font-bold text-lg mb-4 text-[#CA6702]">Interests & Disciplines</h3>
                         <div class="flex flex-col md:flex-row justify-around items-center gap-6">
                              <div class="p-6 bg-gray-100 rounded-lg shadow-md w-full md:w-1/3">
-                                <span class="text-6xl" role="img" aria-label="Martial Arts">🥋</span>
+                                <span class="text-6xl" role="img" aria-label="Yin Yang">☯️</span>
                                 <h4 class="font-bold text-lg mt-2">Kung Fu</h4>
                                 <p class="text-sm">A dedicated practitioner since the age of sixteen, embodying discipline and focus.</p>
                              </div>
@@ -195,7 +195,7 @@
     new Chart(document.getElementById('techCompetenciesChart'), {
         type: 'radar',
         data: {
-            labels: ['Payment Systems', 'Biometrics & AI', 'Blockchain Tech', 'Process Mgmt (BPM)', 'CRM & ERP', 'Financial Services'],
+            labels: ['Payment Systems', 'Biometrics & AI', 'Blockchain Tech', 'Process Mgmt (BPM)', 'Transact', 'Financial Services'],
             datasets: [{
                 label: 'Expertise Level',
                 data: [9, 8, 7, 9, 8, 9],
@@ -211,10 +211,12 @@
             maintainAspectRatio: false,
             scales: {
                 r: {
+                    min: 0,
+                    max: 10,
                     angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
                     grid: { color: 'rgba(0, 0, 0, 0.1)' },
                     pointLabels: { font: { family: 'Inter', size: 12 }, color: brilliantBluesPalette.dark },
-                    ticks: { backdropColor: 'transparent', color: brilliantBluesPalette.dark, font: chartFont }
+                    ticks: { backdropColor: 'transparent', color: brilliantBluesPalette.dark, font: chartFont, stepSize: 1 }
                 }
             },
             plugins: {
