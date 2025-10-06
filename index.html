@@ -258,63 +258,52 @@
         }
     });
     
-    const intellectualLabels = ['Algebraic Logic', 'Axiomatic Geometry', 'Physics', 'Philosophy of Mind', 'Theories of Everything'];
     new Chart(document.getElementById('intellectualInterestsChart'), {
-        type: 'bubble',
-        data: {
-            labels: intellectualLabels,
-            datasets: [{
-                label: 'Primary Focus',
-                data: [
-                    { x: 3, y: 4, r: 25 }, 
-                    { x: 5, y: 3, r: 25 }  
-                ],
-                backgroundColor: brilliantBluesPalette.primary
-            }, {
-                label: 'Secondary Interest',
-                data: [
-                    { x: 2, y: 2, r: 15 },
-                    { x: 4, y: 3, r: 20 },
-                    { x: 3, y: 1, r: 18 }
-                ],
-                backgroundColor: brilliantBluesPalette.accent1
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            scales: { 
-				x: {
-					min: 0,   // 👈 Empieza en 0
-					max: 6,   // 👈 Termina en 6
-					ticks: {stepSize: 1, color: brilliantBluesPalette.dark},
-					grid: {color: 'rgba(0, 0, 0, 0.1)'},
-					title: {display: true, text: 'Importancia', color: brilliantBluesPalette.dark}
-				},
-				y: {
-					min: 0,   // 👈 Empieza en 0
-					max: 5,   // 👈 Termina en 5
-					ticks: {stepSize: 1, color: brilliantBluesPalette.dark},
-					grid: {color: 'rgba(0, 0, 0, 0.1)'},
-					title: {display: true, text: 'Experiencia', color: brilliantBluesPalette.dark}
-				},
-			},
-            plugins: {
-                legend: { display: true },
-                tooltip: { 
-                    callbacks: {
-                        title: tooltipTitleCallback,
-                        label: function(context) {
-                            let label = context.chart.data.labels[context.dataIndex];
-                            if (Array.isArray(label)) {
-                                label = label.join(' ');
-                            }
-                            return `${label}: Focus Level ${context.raw.r}`;
-                        }
-                    }
-                }
-            }
-         }
-    });
+  type: 'bubble',
+  data: {
+    datasets: [
+      {
+        label: 'Primary Focus',
+        data: [
+          { x: 3, y: 4, r: 25, label: 'Algebraic Logic' },
+          { x: 5, y: 3, r: 25, label: 'Axiomatic Geometry' }
+        ],
+        backgroundColor: brilliantBluesPalette.primary
+      },
+      {
+        label: 'Secondary Interest',
+        data: [
+          { x: 2, y: 2, r: 15, label: 'Physics' },
+          { x: 4, y: 3, r: 20, label: 'Philosophy of Mind' },
+          { x: 3, y: 1, r: 18, label: 'Theories of Everything' }
+        ],
+        backgroundColor: brilliantBluesPalette.accent1
+      }
+    ]
+  },
+  options: {
+    maintainAspectRatio: false,
+    scales: {
+      x: { min: 0, max: 6 },
+      y: { min: 0, max: 5 }
+    },
+    plugins: {
+      legend: { display: true },
+      tooltip: {
+        callbacks: {
+          title: function(context) {
+            // toma el label definido dentro del punto
+            return context[0].raw.label || '';
+          },
+          label: function(context) {
+            return `Focus Level ${context.raw.r}`;
+          }
+        }
+      }
+    }
+  }
+});
+
 
     new Chart(document.getElementById('lifeBalanceChart'), {
         type: 'doughnut',
