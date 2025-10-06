@@ -274,7 +274,7 @@
         label: 'Secondary Interest',
         data: [
           { x: 2, y: 2, r: 15, label: 'Physics' },
-          { x: 4, y: 3, r: 20, label: 'Philosophy of Mind' },
+          { x: 4, y: 2.5, r: 20, label: 'Philosophy of Mind' },
           { x: 3, y: 1, r: 18, label: 'Theories of Everything' }
         ],
         backgroundColor: brilliantBluesPalette.accent1
@@ -283,10 +283,40 @@
   },
   options: {
     maintainAspectRatio: false,
-    scales: {
-      x: { min: 0, max: 6 },
-      y: { min: 0, max: 5 }
-    },
+ scales: {
+            x: {
+                min: 0,   // 👈 Empieza en 0
+                max: 5,   // 👈 Termina en 5
+                ticks: {
+                    stepSize: 1,
+                    color: brilliantBluesPalette.dark
+                },
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                },
+                title: {
+                    display: true,
+                    text: 'Importancia',
+                    color: brilliantBluesPalette.dark
+                }
+            },
+            y: {
+                min: 0,   // 👈 Empieza en 0
+                max: 5,   // 👈 Termina en 5
+                ticks: {
+                    stepSize: 1,
+                    color: brilliantBluesPalette.dark
+                },
+                grid: {
+                    color: 'rgba(0, 0, 0, 0.1)'
+                },
+                title: {
+                    display: true,
+                    text: 'Experiencia',
+                    color: brilliantBluesPalette.dark
+                }
+            }
+        },
     plugins: {
       legend: { display: true },
       tooltip: {
