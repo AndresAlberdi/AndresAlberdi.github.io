@@ -29,6 +29,11 @@
         }
     </style>
 </head>
+<div class="flex justify-center mb-10">
+  <img src="foto_pas_aab.jpg" alt="Andrés Alberdi portrait"
+       class="w-40 h-40 rounded-full shadow-2xl border-4 border-[#94D2BD] object-cover hover:scale-105 transition-transform duration-300">
+</div>
+
 <body class="bg-[#005F73] text-gray-800">
 
     <div class="container mx-auto p-4 md:p-8">
@@ -144,9 +149,16 @@
 
         </main>
         
-        <footer class="text-center mt-12 text-[#94D2BD] text-sm">
-            <p>This infographic was dynamically generated to showcase a profile of leadership, innovation, and intellectual depth.</p>
-        </footer>
+        <footer class="text-center mt-12 text-[#94D2BD] text-sm space-y-4">
+		  <p>This infographic was dynamically generated to showcase a profile of leadership, innovation, and intellectual depth.</p>
+		  
+		  <div class="flex justify-center gap-6 text-[#E9D8A6] text-base">
+		    <a href="https://dimensionesenz.blogspot.com/" target="_blank" class="hover:underline hover:text-[#EE9B00] transition-colors">Blogspot</a>
+		    <a href="https://www.linkedin.com/in/andres-alberdi-baptista/" target="_blank" class="hover:underline hover:text-[#EE9B00] transition-colors">LinkedIn</a>
+		    <a href="https://umsa-bo.academia.edu/Andr%C3%A9sAlberdi" target="_blank" class="hover:underline hover:text-[#EE9B00] transition-colors">Academia.edu</a>
+		  </div>
+		</footer>
+
     </div>
 
 <script>
@@ -282,101 +294,129 @@
     });
     
     new Chart(document.getElementById('intellectualInterestsChart'), {
-  type: 'bubble',
-  data: {
-    datasets: [
-      {
-        label: 'Primary Focus',
-        data: [
-          { x: 3, y: 4, r: 25, label: 'Algebraic Logic' },
-          { x: 5, y: 3, r: 25, label: 'Axiomatic Geometry' }
-        ],
-        backgroundColor: brilliantBluesPalette.primary
-      },
-      {
-        label: 'Secondary Interest',
-        data: [
-          { x: 2, y: 2, r: 15, label: 'Physics' },
-          { x: 4, y: 2.5, r: 20, label: 'Philosophy of Mind' },
-          { x: 3, y: 1, r: 18, label: 'Theories of Everything' }
-        ],
-        backgroundColor: brilliantBluesPalette.accent1
-      }
-    ]
-  },
-  options: {
-    maintainAspectRatio: false,
- scales: {
-            x: {
-                min: 0,   // 👈 Empieza en 0
-                max: 6,   // 👈 Termina en 6
-                ticks: {
-                    stepSize: 1,
-                    color: brilliantBluesPalette.dark
-                },
-                grid: {
-                    color: 'rgba(0, 0, 0, 0.1)'
-                },
-                title: {
-                    display: true,
-                    text: 'Value',
-                    color: brilliantBluesPalette.dark
-                }
-            },
-            y: {
-                min: 0,   // 👈 Empieza en 0
-                max: 5,   // 👈 Termina en 5
-                ticks: {
-                    stepSize: 1,
-                    color: brilliantBluesPalette.dark
-                },
-                grid: {
-                    color: 'rgba(0, 0, 0, 0.1)'
-                },
-                title: {
-                    display: true,
-                    text: 'Experience',
-                    color: brilliantBluesPalette.dark
-                }
-            }
-        },
-    plugins: {
-      legend: { display: true },
-      tooltip: {
-        callbacks: {
-          title: function(context) {
-            // toma el label definido dentro del punto
-            return context[0].raw.label || '';
-          },
-          label: function(context) {
-            return `Focus Level ${context.raw.r}`;
-          }
-        }
-      }
-    }
-  }
-});
+	  type: 'bubble',
+	  data: {
+	    datasets: [
+	      {
+	        label: 'Primary Focus',
+	        data: [
+	          { x: 3, y: 4, r: 25, label: 'Algebraic Logic' },
+	          { x: 5, y: 3, r: 25, label: 'Axiomatic Geometry' }
+	        ],
+	        backgroundColor: brilliantBluesPalette.primary
+	      },
+	      {
+	        label: 'Secondary Interest',
+	        data: [
+	          { x: 2, y: 2, r: 15, label: 'Physics' },
+	          { x: 4, y: 2.5, r: 20, label: 'Philosophy of Mind' },
+	          { x: 3, y: 1, r: 18, label: 'Theories of Everything' }
+	        ],
+	        backgroundColor: brilliantBluesPalette.accent1
+	      }
+	    ]
+	  },
+	  options: {
+	    maintainAspectRatio: false,
+	 scales: {
+	            x: {
+	                min: 0,   // 👈 Empieza en 0
+	                max: 6,   // 👈 Termina en 6
+	                ticks: {
+	                    stepSize: 1,
+	                    color: brilliantBluesPalette.dark
+	                },
+	                grid: {
+	                    color: 'rgba(0, 0, 0, 0.1)'
+	                },
+	                title: {
+	                    display: true,
+	                    text: 'Value',
+	                    color: brilliantBluesPalette.dark
+	                }
+	            },
+	            y: {
+	                min: 0,   // 👈 Empieza en 0
+	                max: 5,   // 👈 Termina en 5
+	                ticks: {
+	                    stepSize: 1,
+	                    color: brilliantBluesPalette.dark
+	                },
+	                grid: {
+	                    color: 'rgba(0, 0, 0, 0.1)'
+	                },
+	                title: {
+	                    display: true,
+	                    text: 'Experience',
+	                    color: brilliantBluesPalette.dark
+	                }
+	            }
+	        },
+	    plugins: {
+	      legend: { display: true },
+	      tooltip: {
+	        callbacks: {
+	          title: function(context) {
+	            // toma el label definido dentro del punto
+	            return context[0].raw.label || '';
+	          },
+	          label: function(context) {
+	            return `Focus Level ${context.raw.r}`;
+	          }
+	        }
+	      }
+	    }
+	  }
+	});
 
 
-    new Chart(document.getElementById('lifeBalanceChart'), {
-        type: 'doughnut',
-        data: {
-            labels: ['Family', 'Intellectual Pursuits', 'Discipline (Kung Fu)', 'Recreation (Music)'],
-            datasets: [{
-                data: [43, 30, 17, 10],
-                backgroundColor: [brilliantBluesPalette.accent3, brilliantBluesPalette.primary, brilliantBluesPalette.accent1, brilliantBluesPalette.secondary],
-                hoverOffset: 4
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            cutout: '60%',
-            plugins: {
-                legend: { position: 'bottom', labels: { font: chartFont, color: brilliantBluesPalette.dark } },
-                tooltip: { callbacks: { title: tooltipTitleCallback } }
-            }
-        }
-    });
+   new Chart(document.getElementById('lifeBalanceChart'), {
+	  type: 'doughnut',
+	  data: {
+	    labels: ['Family', 'Intellectual Pursuits', 'Discipline (Kung Fu)', 'Recreation (Music)'],
+	    datasets: [{
+	      data: [43, 30, 17, 10],
+	      backgroundColor: [
+	        brilliantBluesPalette.accent3,
+	        brilliantBluesPalette.primary,
+	        brilliantBluesPalette.accent1,
+	        brilliantBluesPalette.secondary
+	      ],
+	      hoverOffset: 4
+	    }]
+	  },
+	  options: {
+	    responsive: true,              // 👈 importante
+	    maintainAspectRatio: false,    // permite adaptar a móvil
+	    layout: {
+	      padding: { bottom: 40 }      // 👈 agrega espacio para leyendas
+	    },
+	    cutout: '60%',
+	    plugins: {
+	      legend: {
+	        position: 'bottom',
+	        fullSize: true,            // 👈 fuerza a usar todo el ancho
+	        labels: {
+	          boxWidth: 16,
+	          padding: 12,
+	          usePointStyle: true,     // 👈 usa círculos pequeños (mejor distribución)
+	          pointStyle: 'circle',
+	          color: brilliantBluesPalette.dark,
+	          font: {
+	            ...chartFont,
+	            size: 12               // 👈 reduce tamaño para móviles
+	          }
+	        }
+	      },
+	      tooltip: {
+	        callbacks: {
+	          title: tooltipTitleCallback
+	        }
+	      }
+	    }
+	  }
+	});
+
 
 </script>
 
