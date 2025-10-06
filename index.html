@@ -229,7 +229,7 @@
     new Chart(document.getElementById('leadershipRolesChart'), {
         type: 'bar',
         data: {
-            labels: ['General Manager', 'Commercial Manager', 'Project Manager'],
+            labels: ['CEO', 'Commercial', 'Projects/Process'],
             datasets: [{
                 label: 'Strategic Focus',
                 data: [70, 60, 50],
@@ -274,8 +274,8 @@
                 label: 'Secondary Interest',
                 data: [
                     { x: 2, y: 2, r: 15 },
-                    { x: 3, y: 3, r: 20 },
-                    { x: 3, y: 2, r: 18 }
+                    { x: 4, y: 3, r: 20 },
+                    { x: 3, y: 1, r: 18 }
                 ],
                 backgroundColor: brilliantBluesPalette.accent1
             }]
@@ -285,7 +285,7 @@
             scales: { 
 				x: {
 					min: 0,   // 👈 Empieza en 0
-					max: 5,   // 👈 Termina en 5
+					max: 6,   // 👈 Termina en 6
 					ticks: {stepSize: 1, color: brilliantBluesPalette.dark},
 					grid: {color: 'rgba(0, 0, 0, 0.1)'},
 					title: {display: true, text: 'Importancia', color: brilliantBluesPalette.dark}
