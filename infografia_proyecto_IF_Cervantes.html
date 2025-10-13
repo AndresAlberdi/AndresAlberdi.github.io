@@ -109,4 +109,186 @@
             position: relative;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border-left: 5px solid var(--
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .right .content {
+            border-left: none;
+            border-right: 5px solid var(--primary-color);
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .content p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content li {
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .content li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
+        }
+        
+        .icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+            fill: var(--primary-color);
+        }
+        
+        .main-footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 20px;
+            }
+
+            .timeline-container {
+                width: 100%;
+                padding-left: 60px;
+                padding-right: 15px;
+            }
+
+            .timeline-container::after {
+                left: 10px;
+            }
+
+            .left, .right {
+                left: 0%;
+            }
+
+            .right .content {
+                border-right: none;
+                border-left: 5px solid var(--primary-color);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>Proyecto de Transformación Digital</h1>
+            <h2>Isabella & Ferdinand + SkAI Cloud Global</h2>
+        </header>
+
+        <div class="timeline">
+            
+            <div class="timeline-container left">
+                <div class="content">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v4h-2zm0 6h2v2h-2zm-5.66-4.34l1.42-1.42 2.82 2.82-1.42 1.42zm11.32 0l-1.42-1.42-2.82 2.82 1.42 1.42z"/></svg>
+                        1. Visión Estratégica
+                    </h3>
+                    <p><strong>Objetivo:</strong> Centralizar y optimizar la gestión académica de I&F para soportar su crecimiento.</p>
+                    <ul>
+                        <li><strong>Periodo PoC:</strong> Junio - 15 de Septiembre, 2025.</li>
+                        <li><strong>Resultado:</strong> Prototipo funcional validado con éxito.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-container right">
+                <div class="content">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M19.44 12.99l-2.54-.29c-.11-1.02-.45-2-.99-2.88l1.49-2.09c.39-.55.28-1.29-.26-1.68l-1.73-1.23c-.55-.39-1.29-.28-1.68.26l-2.09 1.49c-.88-.54-1.86-.88-2.88-.99l-.29-2.54c-.08-.65-.63-1.15-1.28-1.15h-2.46c-.65 0-1.2.5-1.28 1.15l-.29 2.54c-1.02.11-2 .45-2.88.99l-2.09-1.49c-.55-.39-1.29-.28-1.68.26l-1.73 1.23c-.55.39-.66 1.13-.26 1.68l1.49 2.09c-.54.88-.88 1.86-.99 2.88l-2.54.29c-.65.08-1.15.63-1.15 1.28v2.46c0 .65.5 1.2 1.15 1.28l2.54.29c.11 1.02.45 2 .99 2.88l-1.49 2.09c-.39.55-.28 1.29.26 1.68l1.73 1.23c.55.39 1.29.28 1.68-.26l2.09-1.49c.88.54 1.86.88 2.88.99l.29 2.54c.08.65.63 1.15 1.28 1.15h2.46c.65 0 1.2-.5 1.28-1.15l.29-2.54c1.02-.11 2-.45 2.88-.99l2.09 1.49c.55.39 1.29.28 1.68-.26l1.73-1.23c.55-.39.66-1.13.26-1.68l-1.49-2.09c.54-.88.88-1.86.99-2.88l2.54-.29c.65-.08 1.15-.63 1.15-1.28v-2.46c0-.65-.5-1.2-1.15-1.28zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                        2. La Solución Tecnológica
+                    </h3>
+                    <p><strong>Infraestructura: AWS (Amazon Web Services)</strong></p>
+                    <ul>
+                        <li>Gestionada por: SkAI Cloud Global.</li>
+                        <li>Beneficios: Alta disponibilidad, seguridad y escalabilidad.</li>
+                    </ul>
+                    <p><strong>Plataforma LMS: Moodle 5</strong></p>
+                    <ul>
+                        <li>Gestionada por: Isabella & Ferdinand.</li>
+                        <li>Beneficios: Flexibilidad pedagógica y control total del contenido.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-container left">
+                <div class="content">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M14 10H2v2h12v-2zm0-4H2v2h12V6zM2 16h8v-2H2v2zm19.5-4.5L23 13l-6.99 7-4.51-4.5L13 14l3.01 3 5.49-5.5z"/></svg>
+                        3. Hitos de la Prueba de Concepto
+                    </h3>
+                    <ul>
+                        <li><strong>Contenido Interactivo (H5P):</strong> +40 tipos de actividades dinámicas.</li>
+                        <li><strong>Repositorios Centralizados:</strong> Gestión eficiente de recursos.</li>
+                        <li><strong>Administración Optimizada:</strong> Creación masiva de usuarios y cursos.</li>
+                        <li><strong>Evaluaciones Seguras:</strong> Bancos de preguntas y exámenes aleatorios.</li>
+                        <li><strong>Clases Virtuales Integradas:</strong> Experiencia unificada dentro del LMS.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-container right">
+                <div class="content">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l4-5v4h3l-4 5z"/></svg>
+                        4. Preparados para la Colaboración
+                    </h3>
+                    <p><strong>Compatibilidad Validada con SCORM</strong></p>
+                    <ul>
+                        <li>La plataforma soporta el estándar para contenido educativo.</li>
+                        <li><strong>Oportunidad Clave:</strong> Integración directa de los cursos AVE del Instituto Cervantes.</li>
+                        <li><strong>Capacidad:</strong> Monitoreo del progreso de estudiantes en cursos AVE desde Moodle.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-container left">
+                <div class="content">
+                    <h3>
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        5. Próximos Pasos
+                    </h3>
+                    <p><strong>Fase Actual (2): Asesoramiento y Formalización</strong></p>
+                    <ul>
+                        <li>Firma de acuerdos de servicio.</li>
+                        <li>Planificación detallada de la implementación final.</li>
+                    </ul>
+                    <p><strong>Fases Futuras:</strong> Implementación, integración de pagos, capacitación y puesta en marcha del sistema.</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <footer class="main-footer">
+            <p>Una plataforma robusta y preparada para el futuro de la enseñanza del español.</p>
+            <p>&copy; 2025, SkAI Cloud Global - Consultores Senior en Tecnología</p>
+        </footer>
+    </div>
+
+</body>
+</html>
